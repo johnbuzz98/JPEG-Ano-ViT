@@ -66,12 +66,12 @@ pip install -r requirements.txt
 
 # Result
 
-| Target      | JPEG_AnoViT | AnoViT      |
-| ----------- | ----------- | ----------- |
-| Image AUROC | Image AUROC | Image AUROC | Image AUROC |
+| Target      | JPEG_AnoViT | JPEG_AnoViT | AnoViT      | AnoViT      |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| ----------- | Image AUROC | Pixel AUROC | Image AUROC | Pixel AUROC |
 | Bottle      | 0.8608      | 0.442       |  |  |
-| Cable       |             |             |  |  |
-| Capsule     |             |             |  |  |
+| Cable       | 0.7375      | 0.5988      |  |  |
+| Capsule     | 0.5121      | 0.5006      |  |  |
 | Hazelnut    |             |             |  |  |
 | Metal Nut   |             |             |  |  |
 | Pill        |             |             |  |  |
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 | Toothbrush  |             |             |  |  |
 | Transistor  |             |             |  |  |
 | Zipper      |             |             |  |  |
-| Carpet      |             |             |  |  |
+| Carpet      | 0.5867      | 0.5279      |  |  |
 | Grid        |             |             |  |  |
 | Leather     |             |             |  |  |
 | Tile        |             |             |  |  |
