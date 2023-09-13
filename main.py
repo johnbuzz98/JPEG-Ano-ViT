@@ -27,7 +27,7 @@ def run(cfg):
 #    _logger.info("Device: {}".format(cfg.RANK))
     print(accelerator.log_with)
     # savedir
-    cfg.EXP_NAME = cfg.EXP_NAME + f"-{cfg.DATASET.TARGET}"
+    cfg.EXP_NAME = cfg.EXP_NAME + f"-{cfg.MODEL.DOMAIN}" + f"-{cfg.MODEL.IMAGE_FORMAT}"
     savedir = os.path.join(cfg.RESULT.SAVEDIR, cfg.EXP_NAME)
     os.makedirs(savedir, exist_ok=True)
     config_ = {"model_arch": cfg.MODEL.ARCH, "Image_domain": cfg.MODEL.DOMAIN, "Image_format": cfg.MODEL.IMAGE_FORMAT,

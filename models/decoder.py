@@ -58,7 +58,7 @@ class Decoder(nn.Module):
         out = self.dec_block5(out)
         out = self.up(out)
         out = self.output(out)
-        out = nn.functional.sigmoid(out)
         if self.domain == 'DCT':
             out = rgb_to_dct_ycbcr(out)
+        out = nn.functional.tanb(out) 
         return out

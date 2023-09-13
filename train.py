@@ -64,8 +64,7 @@ def training(cfg, model, trainloader, validloader, criterion, optimizer, schedul
             outputs = model(inputs)
 
             loss_y = criterion(inputs[0], outputs[0])
-            loss_C = criterion(inputs[1], outputs[1])
-            # flatten loss_y and loss_C and 이어붙이기
+            loss_C = criterion(inputs[1], outputs[1]) # TODO 굳이 Flatten? ->  굳이 reduction none in training
             flattened_loss_y = loss_y.view(loss_y.size(0), -1)  # shape: [32, 1*28*28*8*8]
             flattened_loss_C = loss_C.view(loss_C.size(0), -1)  # shape: [32, 2*14*14*8*8]
             # Concatenate (이어붙이기) along the second dimension
